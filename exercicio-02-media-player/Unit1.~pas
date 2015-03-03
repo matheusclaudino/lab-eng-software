@@ -43,6 +43,9 @@ type
     procedure SBCimaClick(Sender: TObject);
     procedure SBBaixoClick(Sender: TObject);
     procedure SBDeleteClick(Sender: TObject);
+    procedure Timer2Timer(Sender: TObject);
+    procedure Ativar1Click(Sender: TObject);
+    procedure Desativar1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -179,6 +182,27 @@ begin
       MediaPlayer1.Close;
       Abrir1Click(Sender);
     end;
+end;
+
+procedure TForm1.Timer2Timer(Sender: TObject);
+  var
+  i:integer;
+begin
+  i:= 1;
+  repeat
+    MediaPlayer1.FileName:= ListBox1.Items.Strings[ListBox1.ItemIndex];
+    MediaPlayer1.Play;
+  until(i <> MediaPlayer1.Length);
+end;
+
+procedure TForm1.Ativar1Click(Sender: TObject);
+begin
+  Timer2.Enabled:= True;
+end;
+
+procedure TForm1.Desativar1Click(Sender: TObject);
+begin
+  Timer2.Enabled:= False;
 end;
 
 end.
