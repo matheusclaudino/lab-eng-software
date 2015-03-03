@@ -131,6 +131,14 @@ object Form1: TForm1
       Visible = False
       TabOrder = 1
     end
+    object RichEdit1: TRichEdit
+      Left = 0
+      Top = 0
+      Width = 193
+      Height = 41
+      TabOrder = 2
+      Visible = False
+    end
   end
   object MainMenu1: TMainMenu
     Left = 873
