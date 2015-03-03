@@ -27,6 +27,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'PLAY'
+      OnClick = SBPlayClick
     end
     object SBPause: TSpeedButton
       Left = 440
@@ -34,6 +35,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'PAUSE'
+      OnClick = SBPauseClick
     end
     object SBStop: TSpeedButton
       Left = 488
@@ -41,6 +43,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'STOP'
+      OnClick = SBStopClick
     end
     object SBNext: TSpeedButton
       Left = 536
@@ -48,6 +51,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'NEXT'
+      OnClick = SBNextClick
     end
     object SBPrior: TSpeedButton
       Left = 584
@@ -55,6 +59,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'PRIOR'
+      OnClick = SBPriorClick
     end
     object SBCima: TSpeedButton
       Left = 16
