@@ -114,6 +114,7 @@ object Form1: TForm1
       Width = 733
       Height = 17
       Align = alBottom
+      Smooth = True
       TabOrder = 0
     end
     object MediaPlayer1: TMediaPlayer

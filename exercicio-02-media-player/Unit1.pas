@@ -40,6 +40,9 @@ type
     procedure SBStopClick(Sender: TObject);
     procedure SBNextClick(Sender: TObject);
     procedure SBPriorClick(Sender: TObject);
+    procedure SBCimaClick(Sender: TObject);
+    procedure SBBaixoClick(Sender: TObject);
+    procedure SBDeleteClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -139,6 +142,42 @@ begin
       MediaPlayer1.Open;
       ProgressBar1.Max := MediaPlayer1.Length;
       MediaPlayer1.Play;
+    end;
+end;
+
+procedure TForm1.SBCimaClick(Sender: TObject);
+begin
+  with ListBox1 do
+    if ListBox1.ItemIndex > 0 then
+    begin
+      ListBox1.Items.Move(ListBox1.ItemIndex, (ListBox1.ItemIndex - 1));
+      ListBox1.ItemIndex:= ListBox1.ItemIndex - 1;
+    end;
+end;
+
+procedure TForm1.SBBaixoClick(Sender: TObject);
+begin
+  with ListBox1 do
+  begin
+    if ListBox1.ItemIndex <> -1 then
+    begin
+      if ListBox1.ItemIndex +1 < ListBox1.Items.Count then
+      begin
+        ListBox1.Items.Move(ListBox1.ItemIndex, (ListBox1.ItemIndex +1));
+        ListBox1.ItemIndex:= ListBox1.ItemIndex +1;
+      end;
+    end;
+  end;
+end;
+
+procedure TForm1.SBDeleteClick(Sender: TObject);
+begin
+  ListBox1.Items.Delete(ListBox1.ItemIndex);
+  if((ListBox1.Items.Count = 0)) then
+    begin
+      ShowMessage('Não tem Música Na PlayList, Por favor Insira uma Nova!');
+      MediaPlayer1.Close;
+      Abrir1Click(Sender);
     end;
 end;
 
