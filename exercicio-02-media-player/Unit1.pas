@@ -47,6 +47,7 @@ type
     procedure Ativar1Click(Sender: TObject);
     procedure Desativar1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -208,8 +209,24 @@ end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  ListBox1.Items.SaveToFile('musicas.txt');
+  ListBox1.Items.SaveToFile('c:\musicas.txt');
   //RichEdit1.Lines.SaveToFile('');
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+   ListBox1.Items.LoadFromFile('C:\Users\Matheus Claudino\Desktop\newMediaPlayer\musicas.txt');
+  //RichEdit.Lines.LoadFromFile('');
+    if ListBox1.Items.Count > 0 then
+    begin
+      ListBox1.ItemIndex:= 0;
+      MediaPlayer1.FileName := ListBox1.Items.Strings[ListBox1.ItemIndex];
+      StatusBar1.SimpleText := MediaPlayer1.FileName;
+      MediaPlayer1.Open;
+      ProgressBar1.Max:= MediaPlayer1.Length;
+      Timer1.Enabled := True;
+    end;
+    ShowMessage('Bem Vindo ao Claudino Player!!!');
 end;
 
 end.

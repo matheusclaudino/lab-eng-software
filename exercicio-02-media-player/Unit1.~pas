@@ -46,6 +46,7 @@ type
     procedure Timer2Timer(Sender: TObject);
     procedure Ativar1Click(Sender: TObject);
     procedure Desativar1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -178,7 +179,7 @@ begin
   ListBox1.Items.Delete(ListBox1.ItemIndex);
   if((ListBox1.Items.Count = 0)) then
     begin
-      ShowMessage('Não tem Música Na PlayList, Por favor Insira uma Nova!');
+      ShowMessage('Não tem Música na PlayList :(  Por favor insira uma nova música!');
       MediaPlayer1.Close;
       Abrir1Click(Sender);
     end;
@@ -203,6 +204,12 @@ end;
 procedure TForm1.Desativar1Click(Sender: TObject);
 begin
   Timer2.Enabled:= False;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  ListBox1.Items.SaveToFile('musicas.txt');
+  //RichEdit1.Lines.SaveToFile('');
 end;
 
 end.
