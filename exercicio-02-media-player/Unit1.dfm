@@ -146,9 +146,11 @@ object Form1: TForm1
         Caption = 'Repetir M'#250'sica'
         object Ativar1: TMenuItem
           Caption = 'Ativar'
+          OnClick = Ativar1Click
         end
         object Desativar1: TMenuItem
           Caption = 'Desativar'
+          OnClick = Desativar1Click
         end
       end
     end
@@ -167,6 +169,7 @@ object Form1: TForm1
   object Timer2: TTimer
     Enabled = False
     Interval = 50
+    OnTimer = Timer2Timer
     Left = 793
     Top = 8
   end

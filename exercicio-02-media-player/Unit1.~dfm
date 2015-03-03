@@ -67,6 +67,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'CIMA'
+      OnClick = SBCimaClick
     end
     object SBBaixo: TSpeedButton
       Left = 64
@@ -74,6 +75,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'BAIXO'
+      OnClick = SBBaixoClick
     end
     object SBDelete: TSpeedButton
       Left = 112
@@ -81,6 +83,7 @@ object Form1: TForm1
       Width = 41
       Height = 22
       Caption = 'DEL'
+      OnClick = SBDeleteClick
     end
     object StatusBar1: TStatusBar
       Left = 1
