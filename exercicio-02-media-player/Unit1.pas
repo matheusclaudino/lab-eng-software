@@ -60,7 +60,7 @@ begin
       ListBox1.Items.Add(OpenDialog1.FileName);
       ListBox1.ItemIndex:= 0;
       MediaPlayer1.FileName:= ListBox1.Items.Strings[ListBox1.ItemIndex];
-      //MediaPlayer1.Open;
+      MediaPlayer1.Open;
       ProgressBar1.Max := MediaPlayer1.Length;
       Timer1.Enabled := True;
     end;
