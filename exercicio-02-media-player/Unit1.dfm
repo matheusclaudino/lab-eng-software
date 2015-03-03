@@ -128,6 +128,7 @@ object Form1: TForm1
       Caption = 'Arquivo'
       object Abrir1: TMenuItem
         Caption = 'Abrir'
+        OnClick = Abrir1Click
       end
     end
     object Opes1: TMenuItem
@@ -150,6 +151,7 @@ object Form1: TForm1
   object Timer1: TTimer
     Enabled = False
     Interval = 50
+    OnTimer = Timer1Timer
     Left = 753
     Top = 8
   end
