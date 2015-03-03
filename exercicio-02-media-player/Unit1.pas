@@ -48,6 +48,7 @@ type
     procedure Desativar1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
+    procedure Timer3Timer(Sender: TObject);
   private
     { Private declarations }
   public
@@ -91,6 +92,8 @@ begin
   StatusBar1.SimpleText:= ExtractFileName(MediaPlayer1.FileName);
   MediaPlayer1.Open;
   MediaPlayer1.Play;
+  ProgressBar1.Max := MediaPlayer1.Length;
+  Timer3.Enabled:= True;
 end;
 
 procedure TForm1.SBPauseClick(Sender: TObject);
@@ -111,20 +114,12 @@ begin
   if (ListBox1.ItemIndex < ListBox1.Items.Count -1) then
         begin
           ListBox1.ItemIndex:= ListBox1.ItemIndex +1;
-          MediaPlayer1.FileName:= ListBox1.Items.Strings[ListBox1.ItemIndex];
-          StatusBar1.SimpleText:= ExtractFileName(MediaPlayer1.FileName);
-          MediaPlayer1.Open;
-          ProgressBar1.Max := MediaPlayer1.Length;
-          MediaPlayer1.Play;
+          SBPlay.OnClick(Sender);
         end
       else
         begin
           ListBox1.ItemIndex:= 0;
-          MediaPlayer1.FileName:= ListBox1.Items.Strings[ListBox1.ItemIndex];
-          StatusBar1.SimpleText:= ExtractFileName(MediaPlayer1.FileName);
-          MediaPlayer1.Open;
-          ProgressBar1.Max := MediaPlayer1.Length;
-          MediaPlayer1.Play;
+          SBPlay.OnClick(Sender);
         end;
 end;
 
@@ -133,20 +128,12 @@ begin
   if (ListBox1.ItemIndex > 0) then
     begin
       ListBox1.ItemIndex:= ListBox1.ItemIndex -1;
-      MediaPlayer1.FileName:= ListBox1.Items.Strings[ListBox1.ItemIndex];
-      StatusBar1.SimpleText:= ExtractFileName(MediaPlayer1.FileName);
-      MediaPlayer1.Open;
-      ProgressBar1.Max := MediaPlayer1.Length;
-      MediaPlayer1.Play;
+      SBPlay.OnClick(Sender);
     end
   else
     begin
       ListBox1.ItemIndex:= ListBox1.Items.Count -1;
-      MediaPlayer1.FileName:= ListBox1.Items.Strings[ListBox1.ItemIndex];
-      StatusBar1.SimpleText:= ExtractFileName(MediaPlayer1.FileName);
-      MediaPlayer1.Open;
-      ProgressBar1.Max := MediaPlayer1.Length;
-      MediaPlayer1.Play;
+      SBPlay.OnClick(Sender);
     end;
 end;
 
@@ -224,9 +211,23 @@ begin
       StatusBar1.SimpleText := MediaPlayer1.FileName;
       MediaPlayer1.Open;
       ProgressBar1.Max:= MediaPlayer1.Length;
-      Timer1.Enabled := True;
+      Timer1.Enabled:= True;
+      //Timer3.Enabled:= True;
     end;
     ShowMessage('Bem Vindo ao Claudino Player!!!');
+end;
+
+procedure TForm1.Timer3Timer(Sender: TObject);
+begin
+  if(ListBox1.Items.Count > 0)then
+  begin
+  ProgressBar1.Position := MediaPlayer1.Position;
+    if(ProgressBar1.Position = MediaPlayer1.Length) then
+    begin
+      Timer3.Enabled:= False;
+      SBNext.OnClick(Sender);
+    end;
+  end;
 end;
 
 end.
