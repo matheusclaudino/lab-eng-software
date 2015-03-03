@@ -215,7 +215,7 @@ end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-   ListBox1.Items.LoadFromFile('C:\Users\Matheus Claudino\Desktop\newMediaPlayer\musicas.txt');
+   ListBox1.Items.LoadFromFile('C:\musicas.txt');
   //RichEdit.Lines.LoadFromFile('');
     if ListBox1.Items.Count > 0 then
     begin
