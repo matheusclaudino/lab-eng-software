@@ -1,6 +1,6 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 1594
-  Top = 212
+  Left = 1538
+  Top = 340
   Width = 574
   Height = 337
   Caption = 'Calculadora / IMC'
@@ -42,8 +42,6 @@ object frmPrincipal: TfrmPrincipal
       Top = 152
       Width = 201
       Height = 89
-      Lines.Strings = (
-        '')
       TabOrder = 0
     end
   end

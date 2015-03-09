@@ -129,7 +129,10 @@ begin
       end;
     end;//fim case
   except
-    raise;
+    on E: Exception do
+      begin
+        raise;
+      end;
   end;//fim try
 end;
 

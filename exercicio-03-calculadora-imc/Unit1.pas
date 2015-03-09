@@ -18,6 +18,8 @@ type
     procedure sbCalculadoraClick(Sender: TObject);
     procedure sbImcClick(Sender: TObject);
     procedure ApplicationEvents1Exception(Sender: TObject; E: Exception);
+    procedure Dinamico(F: TFormClass; F2: TForm);
+
   private
     { Private declarations }
   public
@@ -27,6 +29,7 @@ type
 var
   frmPrincipal: TfrmPrincipal;
 
+
 implementation
 
 Uses Unit2, Unit3, Unit4;
@@ -35,17 +38,17 @@ Uses Unit2, Unit3, Unit4;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
-  frmBemVindo.Show;
+  Dinamico(TfrmBemVindo, frmBemVindo);
 end;
 
 procedure TfrmPrincipal.sbCalculadoraClick(Sender: TObject);
 begin
-  frmCalculadora.Show;
+  Dinamico(TfrmCalculadora, frmCalculadora);
 end;
 
 procedure TfrmPrincipal.sbImcClick(Sender: TObject);
 begin
-  frmImc.Show;
+  Dinamico(TfrmImc, frmImc);
 end;
 
 procedure TfrmPrincipal.ApplicationEvents1Exception(Sender: TObject;
@@ -56,5 +59,16 @@ begin
   if (E is EZeroDivide) then
       ShowMessage('Divisão por zero de número de ponto flutuante');
 end;
+
+procedure TfrmPrincipal.Dinamico(F: TFormClass; F2: TForm);
+begin
+  Application.CreateForm(F,F2);
+  try
+    F2.ShowModal;
+  finally
+    F2.Free;
+  end;
+end;
+
 
 end.

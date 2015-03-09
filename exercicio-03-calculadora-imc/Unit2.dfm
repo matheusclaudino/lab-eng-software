@@ -1,6 +1,6 @@
 object frmBemVindo: TfrmBemVindo
-  Left = 1719
-  Top = 160
+  Left = 1574
+  Top = 179
   Width = 280
   Height = 223
   Caption = 'Bem Vindo!'
@@ -33,6 +33,7 @@ object frmBemVindo: TfrmBemVindo
       Width = 121
       Height = 25
       Caption = 'CONFIRMAR'
+      OnClick = sbConfirmarNomeClick
     end
     object eNome: TEdit
       Left = 72

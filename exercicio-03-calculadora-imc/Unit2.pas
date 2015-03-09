@@ -12,6 +12,7 @@ type
     lNome: TLabel;
     eNome: TEdit;
     sbConfirmarNome: TSpeedButton;
+    procedure sbConfirmarNomeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,6 +24,13 @@ var
 
 implementation
 
+Uses Unit1;
+
 {$R *.dfm}
+
+procedure TfrmBemVindo.sbConfirmarNomeClick(Sender: TObject);
+begin
+  frmPrincipal.mLog.Lines.Add('Usuário: ' + eNome.Text);
+end;
 
 end.
