@@ -36,6 +36,7 @@ type
     procedure sbMaisMenosClick(Sender: TObject);
     procedure sbVirgulaClick(Sender: TObject);
     procedure sbLimparClick(Sender: TObject);
+    procedure sbIgualdadeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -98,6 +99,43 @@ end;
 procedure TfrmCalculadora.sbLimparClick(Sender: TObject);
 begin
   eVisor.Text:= '';
+end;
+
+procedure TfrmCalculadora.sbIgualdadeClick(Sender: TObject);
+var
+  soma: real;
+begin
+  v1:= StrToFloat(eVisor.Text);
+  v2:=StrToFloat(eVisor.Text);
+  case (funcionalidade) of
+  1:
+  begin
+    soma:=v1+v2;
+    eVisor.text:=FloatToStr(soma);
+  end;
+  2:
+  begin
+    soma:=v1-v2;
+    eVisor.text:=FloatToStr(soma);
+  end;
+  3:
+  begin
+    soma:=v1*v2;
+    eVisor.text:=FloatToStr(soma);
+  end;
+  4:
+  begin
+    if(v2<>0)then
+      begin
+        soma:=v1/v2;
+        eVisor.text:=FloatToStr(soma);
+      end
+    else
+      begin
+        SHowMessage('Divisão por zero!!');
+        eVisor.Text:='ERRO';
+      end
+    end
 end;
 
 end.

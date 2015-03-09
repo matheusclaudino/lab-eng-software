@@ -27,6 +27,7 @@ object frmPrincipal: TfrmPrincipal
       Width = 201
       Height = 25
       Caption = 'CALCULADORA'
+      OnClick = sbCalculadoraClick
     end
     object sbImc: TSpeedButton
       Left = 152

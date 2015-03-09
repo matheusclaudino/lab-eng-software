@@ -13,6 +13,7 @@ type
     sbImc: TSpeedButton;
     mLog: TMemo;
     procedure FormShow(Sender: TObject);
+    procedure sbCalculadoraClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,13 +25,18 @@ var
 
 implementation
 
-Uses Unit2;
+Uses Unit2, Unit3;
 
 {$R *.dfm}
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
   frmBemVindo.Show;
+end;
+
+procedure TfrmPrincipal.sbCalculadoraClick(Sender: TObject);
+begin
+  frmCalculadora.Show;
 end;
 
 end.
