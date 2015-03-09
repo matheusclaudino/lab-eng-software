@@ -223,13 +223,14 @@ begin
     begin
       if ListBox1.Items.Count > 0 then
         begin
-          {MediaPlayer1.FileName:= RichEdit1.Lines.Strings[0];
+          MediaPlayer1.FileName:= RichEdit1.Lines.Strings[0];
           StatusBar1.SimpleText:= ExtractFileName(MediaPlayer1.FileName);
-          ShowMessage(ExtractFileName(MediaPlayer1.FileName));
           MediaPlayer1.Open;
+          MediaPlayer1.Position := StrToInt(RichEdit1.Lines.Strings[1]);
           MediaPlayer1.Play;
-          ProgressBar1.Max := StrToInt(RichEdit1.Lines.Strings[1]);
-          Timer3.Enabled:= True;}//achar o arquivo para verificar o conteúdo lógica correta
+          ProgressBar1.Max := MediaPlayer1.Length;
+          ProgressBar1.Position := StrToInt(RichEdit1.Lines.Strings[1]);
+          Timer3.Enabled:= True;
         end;
     end;
 end;

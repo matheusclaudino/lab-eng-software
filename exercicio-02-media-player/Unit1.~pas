@@ -214,18 +214,24 @@ end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
+   ShowMessage('Bem Vindo ao Claudino Player!!!');
+
    ListBox1.Items.LoadFromFile('c:\musicas.txt');
-  //RichEdit.Lines.LoadFromFile('');
-    if ListBox1.Items.Count > 0 then
+   RichEdit1.Lines.LoadFromFile('c:\tocando.txt');
+
+   if(RichEdit1.Lines.Strings[0] <> '') then
     begin
-      ListBox1.ItemIndex:= 0;
-      MediaPlayer1.FileName := ListBox1.Items.Strings[ListBox1.ItemIndex];
-      StatusBar1.SimpleText := MediaPlayer1.FileName;
-      MediaPlayer1.Open;
-      ProgressBar1.Max:= MediaPlayer1.Length;
-      Timer1.Enabled:= True;
+      if ListBox1.Items.Count > 0 then
+        begin
+          {MediaPlayer1.FileName:= RichEdit1.Lines.Strings[0];
+          StatusBar1.SimpleText:= ExtractFileName(MediaPlayer1.FileName);
+          ShowMessage(ExtractFileName(MediaPlayer1.FileName));
+          MediaPlayer1.Open;
+          MediaPlayer1.Play;
+          ProgressBar1.Max := StrToInt(RichEdit1.Lines.Strings[1]);
+          Timer3.Enabled:= True;}//achar o arquivo para verificar o conteúdo lógica correta
+        end;
     end;
-    ShowMessage('Bem Vindo ao Claudino Player!!!');
 end;
 
 procedure TForm1.Timer3Timer(Sender: TObject);

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 1860
-  Top = 153
+  Left = 215
+  Top = 112
   Width = 928
   Height = 480
   Caption = 'Form1'
@@ -138,6 +138,7 @@ object Form1: TForm1
       Height = 41
       TabOrder = 2
       Visible = False
+      WordWrap = False
     end
   end
   object MainMenu1: TMainMenu
