@@ -33,6 +33,7 @@ type
     Timer1: TTimer;
     Timer2: TTimer;
     Timer3: TTimer;
+    RichEdit1: TRichEdit;
     procedure Abrir1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure SBPlayClick(Sender: TObject);
@@ -197,12 +198,23 @@ end;
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   ListBox1.Items.SaveToFile('c:\musicas.txt');
-  //RichEdit1.Lines.SaveToFile('');
+  if ProgressBar1.Position > 0 then
+    begin
+      RichEdit1.Lines.Clear;
+      RichEdit1.Lines.Add(MediaPlayer1.FileName);
+      RichEdit1.Lines.Add(IntToStr(ProgressBar1.Position));
+      RichEdit1.Lines.SaveToFile('c:\tocando.txt');
+    end
+  else
+    begin
+      RichEdit1.Lines.Clear;
+      RichEdit1.Lines.SaveToFile('c:\tocando.txt');
+    end
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-   ListBox1.Items.LoadFromFile('C:\musicas.txt');
+   ListBox1.Items.LoadFromFile('c:\musicas.txt');
   //RichEdit.Lines.LoadFromFile('');
     if ListBox1.Items.Count > 0 then
     begin
@@ -212,7 +224,6 @@ begin
       MediaPlayer1.Open;
       ProgressBar1.Max:= MediaPlayer1.Length;
       Timer1.Enabled:= True;
-      //Timer3.Enabled:= True;
     end;
     ShowMessage('Bem Vindo ao Claudino Player!!!');
 end;
