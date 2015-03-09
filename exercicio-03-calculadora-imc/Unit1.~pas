@@ -30,7 +30,7 @@ Uses Unit2;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
-  frmBemVindo.Show;
+  Form2.Show;
 end;
 
 end.
