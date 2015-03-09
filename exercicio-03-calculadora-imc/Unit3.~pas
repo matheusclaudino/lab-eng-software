@@ -31,6 +31,7 @@ type
     procedure sbUmClick(Sender: TObject);
     procedure sbMaisClick(Sender: TObject);
     procedure sbMenosClick(Sender: TObject);
+    procedure sbDividirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,6 +65,13 @@ begin
 v1:= StrToFloat(eVisor.Text);
   eVisor.Text:= '';
   funcionalidade:= 2;
+end;
+
+procedure TfrmCalculadora.sbDividirClick(Sender: TObject);
+begin
+  v1:= StrToFloat(eVisor.Text);
+  eVisor.Text:= '';
+  funcionalidade:= 3;
 end;
 
 end.
