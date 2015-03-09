@@ -33,6 +33,7 @@ type
     procedure sbMenosClick(Sender: TObject);
     procedure sbDividirClick(Sender: TObject);
     procedure sbMultiplicarClick(Sender: TObject);
+    procedure sbMaisMenosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -80,6 +81,11 @@ begin
   v1:= StrToFloat(eVisor.Text);
   eVisor.Text:= '';
   funcionalidade:= 4;
+end;
+
+procedure TfrmCalculadora.sbMaisMenosClick(Sender: TObject);
+begin
+  eVisor.Text:= '-' + eVisor.Text;
 end;
 
 end.
