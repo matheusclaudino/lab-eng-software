@@ -42,10 +42,10 @@ begin
     imc:= (peso / (altura * altura));
     eImc.Text:= FloatToStr(imc);
   except
-    on E: Exception do
-      begin
-        raise;
-      end;
+    on E: EDivByZero do
+      ShowMessage('Divisão por zero de número inteiro');
+    on E: EZeroDivide do
+      ShowMessage('Divisão por zero de número de ponto flutuante');
   end;
 end;
 

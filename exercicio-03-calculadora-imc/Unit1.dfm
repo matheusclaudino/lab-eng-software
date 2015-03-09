@@ -47,4 +47,9 @@ object frmPrincipal: TfrmPrincipal
       TabOrder = 0
     end
   end
+  object ApplicationEvents1: TApplicationEvents
+    OnException = ApplicationEvents1Exception
+    Left = 16
+    Top = 8
+  end
 end

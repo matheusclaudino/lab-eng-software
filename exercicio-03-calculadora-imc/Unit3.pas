@@ -104,29 +104,33 @@ procedure TfrmCalculadora.sbIgualdadeClick(Sender: TObject);
 var
   soma: real;
 begin
-  v2:= StrToFloat(eVisor.Text);
-  case (funcionalidade) of
-    1:
-    begin
-      soma:= (v1+v2);
-      eVisor.text:=FloatToStr(soma);
-    end;
-    2:
-    begin
-      soma:= (v1-v2);
-      eVisor.text:=FloatToStr(soma);
-    end;
-    3:
-    begin
-      soma:= (v1*v2);
-      eVisor.text:=FloatToStr(soma);
-    end;
-    4:
-    begin
-      soma:= (v1/v2);
-      eVisor.text:=FloatToStr(soma);
-    end;
-    end;
+  try
+    v2:= StrToFloat(eVisor.Text);
+    case (funcionalidade) of
+      1:
+      begin
+        soma:= (v1+v2);
+        eVisor.text:=FloatToStr(soma);
+      end;
+      2:
+      begin
+        soma:= (v1-v2);
+        eVisor.text:=FloatToStr(soma);
+      end;
+      3:
+      begin
+        soma:= (v1*v2);
+        eVisor.text:=FloatToStr(soma);
+      end;
+      4:
+      begin
+        soma:= (v1/v2);
+        eVisor.text:=FloatToStr(soma);
+      end;
+    end;//fim case
+  except
+    raise;
+  end;//fim try
 end;
 
 procedure TfrmCalculadora.FormShow(Sender: TObject);
