@@ -12,8 +12,6 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TfrmBemVindo, frmBemVindo);
-  Application.CreateForm(TfrmCalculadora, frmCalculadora);
-  Application.CreateForm(TfrmImc, frmImc);
+  //Application.CreateForm(TfrmImc, frmImc);
   Application.Run;
 end.

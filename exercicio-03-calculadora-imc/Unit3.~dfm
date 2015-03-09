@@ -153,7 +153,7 @@ object frmCalculadora: TfrmCalculadora
       Left = 16
       Top = 8
       Width = 377
-      Height = 33
+      Height = 21
       TabOrder = 0
     end
   end

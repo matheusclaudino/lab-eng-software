@@ -17,7 +17,6 @@ type
     Label2: TLabel;
     eImc: TEdit;
     procedure sbCalcularClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public

@@ -8,7 +8,7 @@ uses
 
 type
   TfrmCalculadora = class(TForm)
-    Panel1: TPanel;
+    pCalculadora: TPanel;
     eVisor: TEdit;
     sbUm: TSpeedButton;
     sbDois: TSpeedButton;
@@ -36,6 +36,7 @@ type
     procedure sbLimparClick(Sender: TObject);
     procedure sbIgualdadeClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    //procedure Dinamico(SB: TSpeedButton; SBObjeto: );
   private
     { Private declarations }
   public
@@ -140,6 +141,18 @@ procedure TfrmCalculadora.FormShow(Sender: TObject);
 begin
   v1:= 0;
   v2:= 0;
+
+
 end;
+{
+procedure TfrmCalculadora.Dinamico(SB: TSpeedButtonClass; SBObjeto: TSpeedButton);
+begin
+  Application.CreateForm(F,F2);
+  try
+    F2.ShowModal;
+  finally
+    F2.Free;
+  end;
+end;  }
 
 end.

@@ -1,6 +1,6 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 1538
-  Top = 340
+  Left = 1608
+  Top = 326
   Width = 574
   Height = 337
   Caption = 'Calculadora / IMC'
@@ -14,7 +14,7 @@ object frmPrincipal: TfrmPrincipal
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
+  object pPrincipal: TPanel
     Left = 0
     Top = 0
     Width = 558
@@ -42,11 +42,14 @@ object frmPrincipal: TfrmPrincipal
       Top = 152
       Width = 201
       Height = 89
+      Enabled = False
       TabOrder = 0
+      OnExit = mLogExit
     end
   end
   object ApplicationEvents1: TApplicationEvents
     OnException = ApplicationEvents1Exception
+    OnMessage = ApplicationEvents1Message
     Left = 16
     Top = 8
   end
