@@ -151,6 +151,7 @@ object frmCalculadora: TfrmCalculadora
       Width = 65
       Height = 57
       Caption = '*'
+      OnClick = sbMultiplicarClick
     end
     object sbIgualdade: TSpeedButton
       Left = 328
