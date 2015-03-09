@@ -1,8 +1,8 @@
 object frmImc: TfrmImc
-  Left = 1585
-  Top = 141
+  Left = 1597
+  Top = 326
   Width = 471
-  Height = 184
+  Height = 195
   Caption = 'IMC'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +17,7 @@ object frmImc: TfrmImc
     Left = 0
     Top = 0
     Width = 455
-    Height = 146
+    Height = 157
     Align = alClient
     TabOrder = 0
     object LabelPeso: TLabel

@@ -17,6 +17,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure sbCalculadoraClick(Sender: TObject);
     procedure sbImcClick(Sender: TObject);
+    procedure ApplicationEvents1Exception(Sender: TObject; E: Exception);
   private
     { Private declarations }
   public
@@ -45,6 +46,15 @@ end;
 procedure TfrmPrincipal.sbImcClick(Sender: TObject);
 begin
   frmImc.Show;
+end;
+
+procedure TfrmPrincipal.ApplicationEvents1Exception(Sender: TObject;
+  E: Exception);
+begin
+  if (E is EDivByZero) then
+      ShowMessage('Divisão por zero de número inteiro');
+  if (E is EZeroDivide) then
+      ShowMessage('Divisão por zero de número de ponto flutuante');
 end;
 
 end.
