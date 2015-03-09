@@ -35,6 +35,7 @@ type
     procedure sbMultiplicarClick(Sender: TObject);
     procedure sbMaisMenosClick(Sender: TObject);
     procedure sbVirgulaClick(Sender: TObject);
+    procedure sbLimparClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -92,6 +93,11 @@ end;
 procedure TfrmCalculadora.sbVirgulaClick(Sender: TObject);
 begin
   eVisor.Text:= eVisor.Text + ',';
+end;
+
+procedure TfrmCalculadora.sbLimparClick(Sender: TObject);
+begin
+  eVisor.Text:= '';
 end;
 
 end.

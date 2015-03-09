@@ -106,6 +106,7 @@ object frmCalculadora: TfrmCalculadora
       Width = 65
       Height = 57
       Caption = 'C'
+      OnClick = sbLimparClick
     end
     object sbMaisMenos: TSpeedButton
       Left = 328

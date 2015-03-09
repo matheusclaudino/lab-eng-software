@@ -162,6 +162,7 @@ object frmCalculadora: TfrmCalculadora
       Width = 65
       Height = 121
       Caption = '='
+      OnClick = sbIgualdadeClick
     end
     object eVisor: TEdit
       Left = 16
