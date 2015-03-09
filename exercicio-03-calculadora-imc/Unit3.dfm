@@ -143,6 +143,7 @@ object frmCalculadora: TfrmCalculadora
       Width = 65
       Height = 57
       Caption = '/'
+      OnClick = sbDividirClick
     end
     object sbMultiplicar: TSpeedButton
       Left = 248
