@@ -58,10 +58,10 @@ procedure TfrmPrincipal.ApplicationEvents1Exception(Sender: TObject;
   E: Exception);
 begin
   if (E is EDivByZero) then
-      ShowMessage('Divisão por zero de número inteiro');
+      ShowMessage('Erro de divisão por ZERO');//inteiro
 
   if (E is EZeroDivide) then
-      ShowMessage('Divisão por zero de número de ponto flutuante');
+      ShowMessage('Erro de divisão por ZERO');//real
 
   if (E is EInvalidOp) then
       ShowMessage('Operação incorreta de ponto flutuante');
