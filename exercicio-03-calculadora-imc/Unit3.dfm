@@ -135,6 +135,7 @@ object frmCalculadora: TfrmCalculadora
       Width = 65
       Height = 57
       Caption = '-'
+      OnClick = sbMenosClick
     end
     object sbDividir: TSpeedButton
       Left = 248
