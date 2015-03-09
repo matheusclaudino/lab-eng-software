@@ -59,8 +59,19 @@ procedure TfrmPrincipal.ApplicationEvents1Exception(Sender: TObject;
 begin
   if (E is EDivByZero) then
       ShowMessage('Divisão por zero de número inteiro');
+
   if (E is EZeroDivide) then
       ShowMessage('Divisão por zero de número de ponto flutuante');
+
+  if (E is EInvalidOp) then
+      ShowMessage('Operação incorreta de ponto flutuante');
+
+  if (E is EConvertError) then
+      ShowMessage('Digite um número');
+
+  if (E is EAccessViolation) then
+      ShowMessage('Valor null');
+
 end;
 
 procedure TfrmPrincipal.Dinamico(F: TFormClass; F2: TForm);
