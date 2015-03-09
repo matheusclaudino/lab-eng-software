@@ -21,7 +21,7 @@ type
     sbNove: TSpeedButton;
     sbZero: TSpeedButton;
     sbLimpar: TSpeedButton;
-    sbMaisMenos: TSpeedButton;
+    SpeedButton12: TSpeedButton;
     sbMais: TSpeedButton;
     sbVirgula: TSpeedButton;
     sbMenos: TSpeedButton;
@@ -29,7 +29,6 @@ type
     sbMultiplicar: TSpeedButton;
     sbIgualdade: TSpeedButton;
     procedure sbUmClick(Sender: TObject);
-    procedure sbMaisClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,13 +48,6 @@ implementation
 procedure TfrmCalculadora.sbUmClick(Sender: TObject);
 begin
   eVisor.Text := eVisor.Text + (Sender as TSpeedButton).Caption;
-end;
-
-procedure TfrmCalculadora.sbMaisClick(Sender: TObject);
-begin
-  v1:= StrToFloat(eVisor.Text);
-  eVisor.Text:= '';
-  funcionalidade:= 1;
 end;
 
 end.
