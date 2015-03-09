@@ -75,14 +75,14 @@ procedure TfrmCalculadora.sbDividirClick(Sender: TObject);
 begin
   v1:= StrToFloat(eVisor.Text);
   eVisor.Text:= '';
-  funcionalidade:= 3;
+  funcionalidade:= 4;
 end;
 
 procedure TfrmCalculadora.sbMultiplicarClick(Sender: TObject);
 begin
   v1:= StrToFloat(eVisor.Text);
   eVisor.Text:= '';
-  funcionalidade:= 4;
+  funcionalidade:= 3;
 end;
 
 procedure TfrmCalculadora.sbMaisMenosClick(Sender: TObject);
@@ -104,37 +104,28 @@ procedure TfrmCalculadora.sbIgualdadeClick(Sender: TObject);
 var
   soma: real;
 begin
-  v1:= StrToFloat(eVisor.Text);
-  v2:=StrToFloat(eVisor.Text);
+  v2:= StrToFloat(eVisor.Text);
   case (funcionalidade) of
     1:
     begin
-      soma:=v1+v2;
+      soma:= (v1+v2);
       eVisor.text:=FloatToStr(soma);
     end;
     2:
     begin
-      soma:=v1-v2;
+      soma:= (v1-v2);
       eVisor.text:=FloatToStr(soma);
     end;
     3:
     begin
-      soma:=v1*v2;
+      soma:= (v1*v2);
       eVisor.text:=FloatToStr(soma);
     end;
     4:
     begin
-      if(v2<>0)then
-        begin
-          soma:=v1/v2;
-          eVisor.text:=FloatToStr(soma);
-        end
-      else
-        begin
-          SHowMessage('Divisão por zero!!');
-          eVisor.Text:='ERRO';
-        end;
-      end;
+      soma:= (v1/v2);
+      eVisor.text:=FloatToStr(soma);
+    end;
     end;
 end;
 

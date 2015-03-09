@@ -14,6 +14,7 @@ type
     mLog: TMemo;
     procedure FormShow(Sender: TObject);
     procedure sbCalculadoraClick(Sender: TObject);
+    procedure sbImcClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -25,7 +26,7 @@ var
 
 implementation
 
-Uses Unit2, Unit3;
+Uses Unit2, Unit3, Unit4;
 
 {$R *.dfm}
 
@@ -37,6 +38,11 @@ end;
 procedure TfrmPrincipal.sbCalculadoraClick(Sender: TObject);
 begin
   frmCalculadora.Show;
+end;
+
+procedure TfrmPrincipal.sbImcClick(Sender: TObject);
+begin
+  frmImc.Show;
 end;
 
 end.

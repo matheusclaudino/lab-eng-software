@@ -1,6 +1,6 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 1563
-  Top = 134
+  Left = 1586
+  Top = 190
   Width = 574
   Height = 337
   Caption = 'Calculadora / IMC'
@@ -27,6 +27,7 @@ object frmPrincipal: TfrmPrincipal
       Width = 201
       Height = 25
       Caption = 'CALCULADORA'
+      OnClick = sbCalculadoraClick
     end
     object sbImc: TSpeedButton
       Left = 152
@@ -34,6 +35,7 @@ object frmPrincipal: TfrmPrincipal
       Width = 201
       Height = 25
       Caption = 'IMC'
+      OnClick = sbImcClick
     end
     object mLog: TMemo
       Left = 152

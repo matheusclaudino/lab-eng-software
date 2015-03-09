@@ -21,9 +21,7 @@ type
     sbNove: TSpeedButton;
     sbZero: TSpeedButton;
     sbLimpar: TSpeedButton;
-    sbMaisMenos: TSpeedButton;
     sbMais: TSpeedButton;
-    sbVirgula: TSpeedButton;
     sbMenos: TSpeedButton;
     sbDividir: TSpeedButton;
     sbMultiplicar: TSpeedButton;

@@ -109,14 +109,6 @@ object frmCalculadora: TfrmCalculadora
       Caption = 'C'
       OnClick = sbLimparClick
     end
-    object sbMaisMenos: TSpeedButton
-      Left = 328
-      Top = 48
-      Width = 65
-      Height = 57
-      Caption = '+ -'
-      OnClick = sbMaisMenosClick
-    end
     object sbMais: TSpeedButton
       Left = 248
       Top = 48
@@ -124,14 +116,6 @@ object frmCalculadora: TfrmCalculadora
       Height = 57
       Caption = '+'
       OnClick = sbMaisClick
-    end
-    object sbVirgula: TSpeedButton
-      Left = 328
-      Top = 112
-      Width = 65
-      Height = 57
-      Caption = ','
-      OnClick = sbVirgulaClick
     end
     object sbMenos: TSpeedButton
       Left = 248
@@ -142,25 +126,25 @@ object frmCalculadora: TfrmCalculadora
       OnClick = sbMenosClick
     end
     object sbDividir: TSpeedButton
-      Left = 248
-      Top = 176
+      Left = 328
+      Top = 48
       Width = 65
       Height = 57
       Caption = '/'
       OnClick = sbDividirClick
     end
     object sbMultiplicar: TSpeedButton
-      Left = 248
-      Top = 240
+      Left = 328
+      Top = 112
       Width = 65
       Height = 57
       Caption = '*'
       OnClick = sbMultiplicarClick
     end
     object sbIgualdade: TSpeedButton
-      Left = 328
+      Left = 248
       Top = 176
-      Width = 65
+      Width = 145
       Height = 121
       Caption = '='
       OnClick = sbIgualdadeClick
