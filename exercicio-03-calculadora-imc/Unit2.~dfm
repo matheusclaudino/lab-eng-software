@@ -1,6 +1,6 @@
 object frmBemVindo: TfrmBemVindo
-  Left = 1574
-  Top = 179
+  Left = 1845
+  Top = 232
   Width = 280
   Height = 223
   Caption = 'Bem Vindo!'
@@ -13,7 +13,7 @@ object frmBemVindo: TfrmBemVindo
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object pNome: TPanel
+  object pBemVindo: TPanel
     Left = 0
     Top = 0
     Width = 264

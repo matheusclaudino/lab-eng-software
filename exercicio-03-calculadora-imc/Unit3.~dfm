@@ -1,6 +1,6 @@
 object frmCalculadora: TfrmCalculadora
-  Left = 1616
-  Top = 226
+  Left = 1911
+  Top = 285
   Width = 421
   Height = 342
   Caption = 'Calculadora'
@@ -14,7 +14,7 @@ object frmCalculadora: TfrmCalculadora
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
+  object pCalculadora: TPanel
     Left = 0
     Top = 0
     Width = 405

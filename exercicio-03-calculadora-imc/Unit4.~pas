@@ -8,7 +8,7 @@ uses
 
 type
   TfrmImc = class(TForm)
-    Panel1: TPanel;
+    pImc: TPanel;
     LabelPeso: TLabel;
     ePeso: TEdit;
     Label1: TLabel;

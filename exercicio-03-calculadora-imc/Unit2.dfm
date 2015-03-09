@@ -1,5 +1,5 @@
 object frmBemVindo: TfrmBemVindo
-  Left = 1845
+  Left = 639
   Top = 232
   Width = 280
   Height = 223
@@ -11,6 +11,7 @@ object frmBemVindo: TfrmBemVindo
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object pBemVindo: TPanel

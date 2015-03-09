@@ -8,7 +8,7 @@ uses
 
 type
   TfrmBemVindo = class(TForm)
-    pNome: TPanel;
+    pBemVindo: TPanel;
     lNome: TLabel;
     eNome: TEdit;
     sbConfirmarNome: TSpeedButton;
