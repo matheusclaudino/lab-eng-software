@@ -103,7 +103,7 @@ end;
 
 procedure TfrmPrincipal.mLogExit(Sender: TObject);
 begin
-  mLog.Lines.SaveToFile('log.txt');
+  mLog.Lines.SaveToFile('c:\log.txt');
 end;
 
 end.

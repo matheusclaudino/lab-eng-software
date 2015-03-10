@@ -38,6 +38,12 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'IMC'
       OnClick = sbImcClick
     end
+    object SpeedButton1: TSpeedButton
+      Left = 392
+      Top = 40
+      Width = 49
+      Height = 41
+    end
     object mLog: TMemo
       Left = 152
       Top = 152

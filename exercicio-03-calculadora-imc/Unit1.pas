@@ -14,6 +14,7 @@ type
     sbImc: TSpeedButton;
     mLog: TMemo;
     ApplicationEvents1: TApplicationEvents;
+    SpeedButton1: TSpeedButton;
     procedure FormShow(Sender: TObject);
     procedure sbCalculadoraClick(Sender: TObject);
     procedure sbImcClick(Sender: TObject);
@@ -31,7 +32,7 @@ type
 
 var
   frmPrincipal: TfrmPrincipal;
-
+  usuario: String;
 
 implementation
 
@@ -41,7 +42,9 @@ Uses Unit2, Unit3, Unit4;
 
 procedure TfrmPrincipal.FormShow(Sender: TObject);
 begin
-  Dinamico(TfrmBemVindo, frmBemVindo);
+  //Dinamico(TfrmBemVindo, frmBemVindo);
+  usuario:= InputBox('Bem Vindo!', 'Digite seu nome', '');
+  mLog.Lines.Add(usuario + ' logou no sistema');
 end;
 
 procedure TfrmPrincipal.sbCalculadoraClick(Sender: TObject);
@@ -95,7 +98,7 @@ begin
 	  WM_LBUTTONUP:
 	  begin
 	    Componente := FindVCLWindow(Mouse.CursorPos);
-          mLog.Lines.Add('Interagiu com o ' + Componente.Name );
+          mLog.Lines.Add(usuario + ' interagiu com o ' + Componente.Name );
 		    //Showmessage('Classe: ' + Componente.ClassName + ' - Nome: ' + Componente.Name  );
 	  end;
   end;//fim case
