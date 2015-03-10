@@ -1,6 +1,6 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 1608
-  Top = 326
+  Left = 324
+  Top = 225
   Width = 574
   Height = 337
   Caption = 'Calculadora / IMC'
@@ -11,6 +11,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13

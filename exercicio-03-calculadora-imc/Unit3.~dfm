@@ -1,5 +1,5 @@
 object frmCalculadora: TfrmCalculadora
-  Left = 1911
+  Left = 727
   Top = 285
   Width = 421
   Height = 342
@@ -11,6 +11,7 @@ object frmCalculadora: TfrmCalculadora
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
