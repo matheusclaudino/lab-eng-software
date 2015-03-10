@@ -1,5 +1,5 @@
 object frmImc: TfrmImc
-  Left = 1597
+  Left = 308
   Top = 339
   Width = 471
   Height = 182

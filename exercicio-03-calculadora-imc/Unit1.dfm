@@ -1,6 +1,6 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 324
-  Top = 225
+  Left = 694
+  Top = 193
   Width = 574
   Height = 337
   Caption = 'Calculadora / IMC'
@@ -43,6 +43,7 @@ object frmPrincipal: TfrmPrincipal
       Top = 40
       Width = 49
       Height = 41
+      OnClick = SpeedButton1Click
     end
     object mLog: TMemo
       Left = 152

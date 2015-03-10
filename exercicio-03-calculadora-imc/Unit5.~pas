@@ -1,0 +1,49 @@
+unit Unit5;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TfrmCalculadoraDinamica = class(TForm)
+    procedure clickDinamico(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCalculadoraDinamica: TfrmCalculadoraDinamica;
+
+implementation
+
+{$R *.dfm}
+
+procedure clickDinamico(Sender: TObject);
+begin
+  if TButton(Sender).Caption = '1') then
+    ShowMessage('1');
+  if (TButton(Sender).Caption = '2') then
+    ShowMessage('2');
+end;
+
+procedure TfrmCalculadoraDinamica.FormShow(Sender: TObject);
+var
+  x, y, i, j: Integer;
+  b: TButton;
+begin
+  x:= 5;
+  y:= 5;
+  j:= 1;
+
+  {for i:= 0 to 9 do
+    b:= TB}
+
+
+end;
+
+end.
