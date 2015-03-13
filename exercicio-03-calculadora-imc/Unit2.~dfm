@@ -1,5 +1,5 @@
 object frmBemVindo: TfrmBemVindo
-  Left = 639
+  Left = 689
   Top = 232
   Width = 280
   Height = 223

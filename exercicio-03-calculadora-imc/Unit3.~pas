@@ -141,18 +141,6 @@ procedure TfrmCalculadora.FormShow(Sender: TObject);
 begin
   v1:= 0;
   v2:= 0;
-
-
 end;
-{
-procedure TfrmCalculadora.Dinamico(SB: TSpeedButtonClass; SBObjeto: TSpeedButton);
-begin
-  Application.CreateForm(F,F2);
-  try
-    F2.ShowModal;
-  finally
-    F2.Free;
-  end;
-end;  }
 
 end.

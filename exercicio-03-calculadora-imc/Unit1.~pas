@@ -23,6 +23,7 @@ type
     procedure ApplicationEvents1Message(var Msg: tagMSG;
       var Handled: Boolean);
     procedure mLogExit(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -36,7 +37,7 @@ var
 
 implementation
 
-Uses Unit2, Unit3, Unit4;
+Uses Unit2, Unit3, Unit4, Unit5;
 
 {$R *.dfm}
 
@@ -107,6 +108,11 @@ end;
 procedure TfrmPrincipal.mLogExit(Sender: TObject);
 begin
   mLog.Lines.SaveToFile('c:\log.txt');
+end;
+
+procedure TfrmPrincipal.SpeedButton1Click(Sender: TObject);
+begin
+  frmCalculadoraDinamica.Show;
 end;
 
 end.

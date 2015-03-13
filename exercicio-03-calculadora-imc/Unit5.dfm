@@ -1,6 +1,6 @@
 object frmCalculadoraDinamica: TfrmCalculadoraDinamica
-  Left = 192
-  Top = 124
+  Left = 543
+  Top = 176
   Width = 396
   Height = 350
   Caption = 'Calculadora Din'#226'mica'
