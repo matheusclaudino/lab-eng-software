@@ -2,7 +2,7 @@ object frmCalculadoraDinamica: TfrmCalculadoraDinamica
   Left = 373
   Top = 504
   Width = 260
-  Height = 354
+  Height = 296
   Caption = 'Calculadora Din'#226'mica'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -25,7 +25,7 @@ object frmCalculadoraDinamica: TfrmCalculadoraDinamica
     Left = 0
     Top = 48
     Width = 241
-    Height = 265
+    Height = 209
     TabOrder = 1
   end
 end
