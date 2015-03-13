@@ -67,7 +67,7 @@ end;
 
 procedure TfrmCalculadora.sbMenosClick(Sender: TObject);
 begin
-v1:= StrToFloat(eVisor.Text);
+  v1:= StrToFloat(eVisor.Text);
   eVisor.Text:= '';
   funcionalidade:= 2;
 end;

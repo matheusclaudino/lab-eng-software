@@ -54,6 +54,7 @@ object frmPrincipal: TfrmPrincipal
       Height = 89
       Enabled = False
       TabOrder = 0
+      WordWrap = False
       OnExit = mLogExit
     end
   end

@@ -46,26 +46,45 @@ begin
     b.Top:= v;
     b.Left:= h;
     if(i < 10) then
-      b.Caption:= IntToStr(i);
-
+      begin
+        b.Caption:= IntToStr(i);
+        b.Name:= 'b' + IntToStr(i);
+      end;
     if(i = 10) then
-      b.Caption:= '=';
-
+      begin
+        b.Caption:= '=';
+        b.Name:= 'bIgualdade';
+      end;
     if(i = 11) then
-      b.Caption:= 'C';
+      begin
+        b.Caption:= 'C';
+        b.Name:= 'bClear';
+      end;
 
     if(i = 12) then
-      b.Caption:= '+';
+      begin
+        b.Caption:= '+';
+        b.Name:= 'bSoma';
+      end;
 
     if(i = 13) then
-      b.Caption:= '-';
+      begin
+        b.Caption:= '-';
+        b.Name:= 'bSubtrai';
+      end;
 
     if(i = 14) then
-      b.Caption:= '*';
+      begin
+        b.Caption:= '*';
+        b.Name:= 'bMultiplica';
+      end;
 
     if(i = 15) then
-      b.Caption:= '/';
-
+      begin
+        b.Caption:= '/';
+        b.Name:= 'bDivide';
+      end;
+      
     b.OnClick:= clickDinamico;
     h:= b.Width + h + 5;
     Inc(j);

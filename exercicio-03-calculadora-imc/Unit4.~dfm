@@ -1,6 +1,6 @@
 object frmImc: TfrmImc
-  Left = 250
-  Top = 203
+  Left = 307
+  Top = 278
   Width = 471
   Height = 182
   Caption = 'IMC'

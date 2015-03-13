@@ -1,8 +1,8 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 214
-  Top = 151
-  Width = 574
-  Height = 337
+  Left = 307
+  Top = 162
+  Width = 248
+  Height = 226
   Caption = 'Calculadora / IMC'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,13 +18,13 @@ object frmPrincipal: TfrmPrincipal
   object pPrincipal: TPanel
     Left = 0
     Top = 0
-    Width = 558
-    Height = 299
+    Width = 232
+    Height = 188
     Align = alClient
     TabOrder = 0
     object sbCalculadora: TSpeedButton
-      Left = 360
-      Top = 272
+      Left = 16
+      Top = 168
       Width = 201
       Height = 25
       Caption = 'CALCULADORA'
@@ -32,24 +32,24 @@ object frmPrincipal: TfrmPrincipal
       OnClick = sbCalculadoraClick
     end
     object sbImc: TSpeedButton
-      Left = 152
-      Top = 88
+      Left = 16
+      Top = 40
       Width = 201
       Height = 25
       Caption = 'IMC'
       OnClick = sbImcClick
     end
     object sbCalculadoraDinamica: TSpeedButton
-      Left = 152
-      Top = 48
+      Left = 16
+      Top = 8
       Width = 201
       Height = 25
       Caption = 'CALCULADORA'
       OnClick = sbCalculadoraDinamicaClick
     end
     object mLog: TMemo
-      Left = 152
-      Top = 152
+      Left = 16
+      Top = 72
       Width = 201
       Height = 89
       Enabled = False
@@ -60,7 +60,6 @@ object frmPrincipal: TfrmPrincipal
   object ApplicationEvents1: TApplicationEvents
     OnException = ApplicationEvents1Exception
     OnMessage = ApplicationEvents1Message
-    Left = 16
-    Top = 8
+    Top = 56
   end
 end
