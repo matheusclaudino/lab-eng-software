@@ -1,6 +1,6 @@
 object frmBemVindo: TfrmBemVindo
-  Left = 561
-  Top = 171
+  Left = 502
+  Top = 251
   Width = 280
   Height = 223
   Caption = 'Bem Vindo!'

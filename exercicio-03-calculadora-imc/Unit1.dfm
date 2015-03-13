@@ -1,6 +1,6 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 565
-  Top = 142
+  Left = 214
+  Top = 151
   Width = 574
   Height = 337
   Caption = 'Calculadora / IMC'

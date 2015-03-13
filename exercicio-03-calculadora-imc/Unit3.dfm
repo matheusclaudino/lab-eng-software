@@ -1,6 +1,6 @@
 object frmCalculadora: TfrmCalculadora
-  Left = 289
-  Top = 146
+  Left = 280
+  Top = 154
   Width = 421
   Height = 342
   Caption = 'Calculadora'
