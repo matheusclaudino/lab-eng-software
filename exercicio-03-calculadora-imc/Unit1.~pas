@@ -14,7 +14,7 @@ type
     sbImc: TSpeedButton;
     mLog: TMemo;
     ApplicationEvents1: TApplicationEvents;
-    SpeedButton1: TSpeedButton;
+    sbCalculadoraDinamica: TSpeedButton;
     procedure FormShow(Sender: TObject);
     procedure sbCalculadoraClick(Sender: TObject);
     procedure sbImcClick(Sender: TObject);
@@ -23,7 +23,7 @@ type
     procedure ApplicationEvents1Message(var Msg: tagMSG;
       var Handled: Boolean);
     procedure mLogExit(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
+    procedure sbCalculadoraDinamicaClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -110,7 +110,7 @@ begin
   mLog.Lines.SaveToFile('c:\log.txt');
 end;
 
-procedure TfrmPrincipal.SpeedButton1Click(Sender: TObject);
+procedure TfrmPrincipal.sbCalculadoraDinamicaClick(Sender: TObject);
 begin
   //Dinamico(TfrmCalculadoraDinamica, frmCalculadoraDinamica);
   Application.CreateForm(TfrmCalculadoraDinamica, frmCalculadoraDinamica);

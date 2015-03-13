@@ -23,11 +23,12 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     TabOrder = 0
     object sbCalculadora: TSpeedButton
-      Left = 152
-      Top = 40
+      Left = 360
+      Top = 272
       Width = 201
       Height = 25
       Caption = 'CALCULADORA'
+      Visible = False
       OnClick = sbCalculadoraClick
     end
     object sbImc: TSpeedButton
@@ -38,12 +39,13 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'IMC'
       OnClick = sbImcClick
     end
-    object SpeedButton1: TSpeedButton
-      Left = 392
-      Top = 40
-      Width = 49
-      Height = 41
-      OnClick = SpeedButton1Click
+    object sbCalculadoraDinamica: TSpeedButton
+      Left = 152
+      Top = 48
+      Width = 201
+      Height = 25
+      Caption = 'CALCULADORA'
+      OnClick = sbCalculadoraDinamicaClick
     end
     object mLog: TMemo
       Left = 152
