@@ -112,9 +112,7 @@ end;
 
 procedure TfrmPrincipal.sbCalculadoraDinamicaClick(Sender: TObject);
 begin
-  //Dinamico(TfrmCalculadoraDinamica, frmCalculadoraDinamica);
-  Application.CreateForm(TfrmCalculadoraDinamica, frmCalculadoraDinamica);
-  frmCalculadoraDinamica.ShowModal;
+  Dinamico(TfrmCalculadoraDinamica, frmCalculadoraDinamica);
 end;
 
 end.
