@@ -32,13 +32,36 @@ begin
   v:= 5;
   j:= 1;
 
-  for i:= 0 to 9 do
+  for i:= 0 to 15 do
   begin
     b:= TButton.Create(frmCalculadoraDinamica);
     b.Parent:= frmCalculadoraDinamica;
     b.Top:= v;
     b.Left:= h;
-    b.Caption:= IntToStr(i);
+    if(i < 10) then
+      b.Caption:= IntToStr(i);
+
+    if(i = 10) then
+      b.Caption:= '=';
+
+    if(i = 11) then
+      b.Caption:= 'C';
+
+    if(i = 12) then
+      b.Caption:= '+';
+
+    if(i = 13) then
+      b.Caption:= '-';
+
+    if(i = 14) then
+      b.Caption:= '*';
+
+    if(i = 15) then
+      b.Caption:= '/';
+
+
+
+
     b.OnClick:= clickDinamico;
     h:= b.Width + h + 5;
     Inc(j);
